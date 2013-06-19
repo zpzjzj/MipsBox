@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{16654FCD-FCCC-4F74-90F5-BEB8B85B5812}</ProjectGuid>
+    <RootNamespace>OS</RootNamespace>
+    <ProjectName>MipsBox</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="arithmetic\floatOperation.h" />
+    <ClInclude Include="arithmetic\fsTrans.h" />
+    <ClInclude Include="arithmetic\header.h" />
+    <ClInclude Include="arithmetic\iadder.h" />
+    <ClInclude Include="arithmetic\imulti.h" />
+    <ClInclude Include="codeType.h" />
+    <ClInclude Include="dasm\dasm_header.h" />
+    <ClInclude Include="dasm\dasm_lenDef.h" />
+    <ClInclude Include="dasm\dasm_reg.h" />
+    <ClInclude Include="dasm\TransCode\dasm\dasm_Disassemble.h" />
+    <ClInclude Include="dasm\TransCode\dasm_instruction.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="GetStr.h" />
+    <ClInclude Include="header.h" />
+    <ClInclude Include="lenDef.h" />
+    <ClInclude Include="memory.h" />
+    <ClInclude Include="memType.h" />
+    <ClInclude Include="proceed.h" />
+    <ClInclude Include="reg.h" />
+    <ClInclude Include="TransCode\dasm\dasm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="arithmetic\floatOperation.cpp" />
+    <ClCompile Include="arithmetic\fsTrans.cpp" />
+    <ClCompile Include="arithmetic\iadder.cpp" />
+    <ClCompile Include="arithmetic\imulti.cpp" />
+    <ClCompile Include="cpu_main.cpp" />
+    <ClCompile Include="dasm\dasm_reg.cpp" />
+    <ClCompile Include="dasm\TransCode\dasm\dasm_dasm.cpp" />
+    <ClCompile Include="dasm\TransCode\dasm\dasm_Disassemble.cpp" />
+    <ClCompile Include="display.cpp" />
+    <ClCompile Include="GetStr.cpp" />
+    <ClCompile Include="memory.cpp" />
+    <ClCompile Include="proceed.cpp" />
+    <ClCompile Include="reg.cpp" />
+    <ClCompile Include="TransCode\instruction.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

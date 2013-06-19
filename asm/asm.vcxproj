@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\asm_source\pseudo_instr.txt" />
+    <Text Include="pseudo_instr.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="assembleInit.cpp" />
+    <ClCompile Include="GetStr.cpp" />
+    <ClCompile Include="hash\GeneralHashFunctions.cpp" />
+    <ClCompile Include="hash\HashQuad.cpp" />
+    <ClCompile Include="reg.cpp" />
+    <ClCompile Include="TransCode\asm\asm.cpp" />
+    <ClCompile Include="TransCode\asm\asm_main.cpp" />
+    <ClCompile Include="TransCode\asm\Assemble.cpp" />
+    <ClCompile Include="TransCode\asm\label.cpp" />
+    <ClCompile Include="TransCode\asm\pseudo_instr.cpp" />
+    <ClCompile Include="TransCode\instruction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="assembleInit.h" />
+    <ClInclude Include="codeType.h" />
+    <ClInclude Include="GetStr.h" />
+    <ClInclude Include="hash\GeneralHashFunctions.h" />
+    <ClInclude Include="hash\HashQuad.h" />
+    <ClInclude Include="header.h" />
+    <ClInclude Include="lenDef.h" />
+    <ClInclude Include="memType.h" />
+    <ClInclude Include="reg.h" />
+    <ClInclude Include="TransCode\asm\asm.h" />
+    <ClInclude Include="TransCode\asm\Assemble.h" />
+    <ClInclude Include="TransCode\asm\label.h" />
+    <ClInclude Include="TransCode\asm\pseudo_instr.h" />
+    <ClInclude Include="TransCode\instruction.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{774ADCAE-B9DE-4ED1-8F90-2EF8BA761FE4}</ProjectGuid>
+    <RootNamespace>asm</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\dasm">
+      <UniqueIdentifier>{be24012c-57c0-4fd1-8ffb-52a99ed9aa5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\dasm">
+      <UniqueIdentifier>{f61f859d-0f2e-4795-a4b1-bc989ed8bb3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\arithmetic">
+      <UniqueIdentifier>{d904dea2-ce68-4bc3-bdb2-708eb6190336}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\arithmetic">
+      <UniqueIdentifier>{5b9502d9-bcfa-46fe-b944-ee2d2e9ec47a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="codeType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetStr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lenDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="proceed.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="reg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TransCode\dasm\dasm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dasm\TransCode\dasm\dasm_Disassemble.h">
+      <Filter>Header Files\dasm</Filter>
+    </ClInclude>
+    <ClInclude Include="dasm\dasm_header.h">
+      <Filter>Header Files\dasm</Filter>
+    </ClInclude>
+    <ClInclude Include="dasm\TransCode\dasm_instruction.h">
+      <Filter>Header Files\dasm</Filter>
+    </ClInclude>
+    <ClInclude Include="dasm\dasm_lenDef.h">
+      <Filter>Header Files\dasm</Filter>
+    </ClInclude>
+    <ClInclude Include="dasm\dasm_reg.h">
+      <Filter>Header Files\dasm</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmetic\floatOperation.h">
+      <Filter>Header Files\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmetic\fsTrans.h">
+      <Filter>Header Files\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmetic\header.h">
+      <Filter>Header Files\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmetic\imulti.h">
+      <Filter>Header Files\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmetic\iadder.h">
+      <Filter>Header Files\arithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="display.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpu_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetStr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proceed.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransCode\instruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dasm\TransCode\dasm\dasm_dasm.cpp">
+      <Filter>Source Files\dasm</Filter>
+    </ClCompile>
+    <ClCompile Include="dasm\TransCode\dasm\dasm_Disassemble.cpp">
+      <Filter>Source Files\dasm</Filter>
+    </ClCompile>
+    <ClCompile Include="dasm\dasm_reg.cpp">
+      <Filter>Source Files\dasm</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\floatOperation.cpp">
+      <Filter>Source Files\arithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\fsTrans.cpp">
+      <Filter>Source Files\arithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\iadder.cpp">
+      <Filter>Source Files\arithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmetic\imulti.cpp">
+      <Filter>Source Files\arithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="display.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

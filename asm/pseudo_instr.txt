@@ -1,0 +1,20 @@
+2 blt rs rt label
+slt $at rs rt
+bne $at $zero label
+2 bgt rs rt label
+slt $at rt rs
+bne $at $zero label
+2 ble rs rt label
+slt $at rt rs
+beq $at $zero label
+2 bge rs rt label
+slt $at rs rt
+beq $at $zero label
+2 sne rd rs rt
+sub rd rs rt
+sltu rd $zero rd
+4 abs rd rs
+slt $at rs $zero
+sub $at $zero $at
+xor rd $at rs
+sub rd rd $at

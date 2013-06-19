@@ -1,0 +1,42 @@
+1 inc rd
+addi rd rd 1
+1 dec rd
+addi rd rd -1
+2 pushb rd
+addi $sp $sp -1
+sb rd 0 $sp
+2 popb rd
+lb rd 0 $sp
+addi $sp $sp 1
+2 push rd
+addi $sp $sp -4
+sw rd 0 $sp
+2 pop rd
+lw rd 0 $sp
+addi $sp $sp 4
+1 li rd immediate
+addi rd $zero immediate
+1 move rd rs
+add rd rs $zero
+2 blt rs rt label
+slt $at rs rt
+bne $at $zero label
+2 bgt rs rt label
+slt $at rt rs
+bne $at $zero label
+2 ble rs rt label
+slt $at rt rs
+beq $at $zero label
+2 bge rs rt label
+slt $at rs rt
+beq $at $zero label
+2 sne rd rs rt
+sub rd rs rt
+sltu rd $zero rd
+4 abs rd rs
+slt $at rs $zero
+sub $at $zero $at
+xor rd $at rs
+sub rd rd $at
+1 la rd label
+addi rd $zero immediate

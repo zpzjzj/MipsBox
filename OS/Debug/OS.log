@@ -1,0 +1,121 @@
+﻿Build started 6/19/2013 1:45:59 PM.
+     1>Project "D:\C++\MipsBox\OS\OS.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Software\IDE\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt arithmetic\floatOperation.cpp arithmetic\fsTrans.cpp arithmetic\iadder.cpp arithmetic\imulti.cpp cpu_main.cpp dasm\dasm_reg.cpp dasm\TransCode\dasm\dasm_dasm.cpp dasm\TransCode\dasm\dasm_Disassemble.cpp display.cpp GetStr.cpp memory.cpp proceed.cpp reg.cpp TransCode\instruction.cpp
+         instruction.cpp
+     1>d:\c++\mipsbox\os\transcode\instruction.h(27): warning C4091: 'extern ' : ignored on left of 'instruction_table' when no variable is declared
+     1>d:\c++\mipsbox\os\transcode\instruction.cpp(28): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\c++\mipsbox\os\transcode\instruction.cpp(71): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>d:\c++\mipsbox\os\transcode\instruction.cpp(72): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+         reg.cpp
+         proceed.cpp
+         memory.cpp
+     1>d:\c++\mipsbox\os\header.h(14): warning C4005: 'ERROR' : macro redefinition
+                 c:\program files\windows kits\8.0\include\um\wingdi.h(114) : see previous definition of 'ERROR'
+     1>d:\c++\mipsbox\os\memory.cpp(52): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\os\memory.cpp(53): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\c++\mipsbox\os\memory.cpp(164): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\os\memory.cpp(165): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\c++\mipsbox\os\memory.cpp(187): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\os\memory.cpp(188): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         GetStr.cpp
+         display.cpp
+     1>d:\c++\mipsbox\os\display.cpp(38): warning C4101: 'Delta' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(36): warning C4101: 'OldAttrib' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(35): warning C4101: 'OldCell' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(95): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\conio.h(133) : see declaration of 'kbhit'
+     1>d:\c++\mipsbox\os\display.cpp(96): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\conio.h(131) : see declaration of 'getch'
+         dasm_Disassemble.cpp
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm_instruction.h(26): warning C4091: 'extern ' : ignored on left of 'instruction_table' when no variable is declared
+         dasm_dasm.cpp
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm_instruction.h(26): warning C4091: 'extern ' : ignored on left of 'instruction_table' when no variable is declared
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(52): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdlib.h(909) : see declaration of 'itoa'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(54): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdlib.h(909) : see declaration of 'itoa'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(77): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(82): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(83): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(104): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(107): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(117): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(122): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(125): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(127): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(131): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\os\dasm\transcode\dasm\dasm_dasm.cpp(135): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+         dasm_reg.cpp
+     1>d:\c++\mipsbox\os\dasm\dasm_reg.cpp(120): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\os\dasm\dasm_reg.cpp(125): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\os\dasm\dasm_reg.cpp(134): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\os\dasm\dasm_reg.cpp(139): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+         cpu_main.cpp
+     1>d:\c++\mipsbox\os\header.h(14): warning C4005: 'ERROR' : macro redefinition
+                 c:\program files\windows kits\8.0\include\um\wingdi.h(114) : see previous definition of 'ERROR'
+     1>d:\c++\mipsbox\os\cpu_main.cpp(40): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(261) : see declaration of 'gets'
+     1>d:\c++\mipsbox\os\cpu_main.cpp(81): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\c++\mipsbox\os\cpu_main.cpp(101): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         imulti.cpp
+     1>d:\c++\mipsbox\os\arithmetic\imulti.cpp(116): warning C4244: 'argument' : conversion from 'LOperand_type' to 'operand_type', possible loss of data
+     1>d:\c++\mipsbox\os\arithmetic\imulti.cpp(116): warning C4244: '=' : conversion from 'LOperand_type' to 'int32_t', possible loss of data
+         iadder.cpp
+         fsTrans.cpp
+     1>d:\c++\mipsbox\os\arithmetic\fstrans.cpp(51): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\os\arithmetic\fstrans.cpp(150): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\os\arithmetic\fstrans.cpp(182): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+         floatOperation.cpp
+     1>d:\c++\mipsbox\os\arithmetic\floatoperation.cpp(123): warning C4244: 'return' : conversion from 'LOperand_type' to 'operand_type', possible loss of data
+         Generating Code...
+       Link:
+         D:\Software\IDE\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\C++\MipsBox\Debug\MipsBox.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\C++\MipsBox\Debug\MipsBox.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\C++\MipsBox\Debug\MipsBox.lib" /MACHINE:X86 Debug\floatOperation.obj
+         Debug\fsTrans.obj
+         Debug\iadder.obj
+         Debug\imulti.obj
+         Debug\cpu_main.obj
+         Debug\dasm_reg.obj
+         Debug\dasm_dasm.obj
+         Debug\dasm_Disassemble.obj
+         Debug\display.obj
+         Debug\GetStr.obj
+         Debug\memory.obj
+         Debug\proceed.obj
+         Debug\reg.obj
+         Debug\instruction.obj
+         OS.vcxproj -> D:\C++\MipsBox\Debug\MipsBox.exe
+     1>Done Building Project "D:\C++\MipsBox\OS\OS.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:09.54
