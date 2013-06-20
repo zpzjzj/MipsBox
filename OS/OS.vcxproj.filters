@@ -51,9 +51,6 @@
     <ClInclude Include="reg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TransCode\dasm\dasm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="dasm\TransCode\dasm\dasm_Disassemble.h">
       <Filter>Header Files\dasm</Filter>
     </ClInclude>

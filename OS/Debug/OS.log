@@ -1,4 +1,4 @@
-﻿Build started 6/19/2013 1:45:59 PM.
+﻿Build started 6/20/2013 5:51:28 PM.
      1>Project "D:\C++\MipsBox\OS\OS.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          D:\Software\IDE\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt arithmetic\floatOperation.cpp arithmetic\fsTrans.cpp arithmetic\iadder.cpp arithmetic\imulti.cpp cpu_main.cpp dasm\dasm_reg.cpp dasm\TransCode\dasm\dasm_dasm.cpp dasm\TransCode\dasm\dasm_Disassemble.cpp display.cpp GetStr.cpp memory.cpp proceed.cpp reg.cpp TransCode\instruction.cpp
@@ -19,22 +19,22 @@
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
      1>d:\c++\mipsbox\os\memory.cpp(53): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>d:\c++\mipsbox\os\memory.cpp(164): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>d:\c++\mipsbox\os\memory.cpp(167): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
-     1>d:\c++\mipsbox\os\memory.cpp(165): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>d:\c++\mipsbox\os\memory.cpp(168): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>d:\c++\mipsbox\os\memory.cpp(187): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>d:\c++\mipsbox\os\memory.cpp(191): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
-     1>d:\c++\mipsbox\os\memory.cpp(188): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>d:\c++\mipsbox\os\memory.cpp(192): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
          GetStr.cpp
          display.cpp
-     1>d:\c++\mipsbox\os\display.cpp(38): warning C4101: 'Delta' : unreferenced local variable
-     1>d:\c++\mipsbox\os\display.cpp(36): warning C4101: 'OldAttrib' : unreferenced local variable
-     1>d:\c++\mipsbox\os\display.cpp(35): warning C4101: 'OldCell' : unreferenced local variable
-     1>d:\c++\mipsbox\os\display.cpp(95): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
+     1>d:\c++\mipsbox\os\display.cpp(40): warning C4101: 'Delta' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(38): warning C4101: 'OldAttrib' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(37): warning C4101: 'OldCell' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(119): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\conio.h(133) : see declaration of 'kbhit'
-     1>d:\c++\mipsbox\os\display.cpp(96): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+     1>d:\c++\mipsbox\os\display.cpp(120): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\conio.h(131) : see declaration of 'getch'
          dasm_Disassemble.cpp
      1>d:\c++\mipsbox\os\dasm\transcode\dasm_instruction.h(26): warning C4091: 'extern ' : ignored on left of 'instruction_table' when no variable is declared
@@ -78,11 +78,11 @@
          cpu_main.cpp
      1>d:\c++\mipsbox\os\header.h(14): warning C4005: 'ERROR' : macro redefinition
                  c:\program files\windows kits\8.0\include\um\wingdi.h(114) : see previous definition of 'ERROR'
-     1>d:\c++\mipsbox\os\cpu_main.cpp(40): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>d:\c++\mipsbox\os\cpu_main.cpp(43): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(261) : see declaration of 'gets'
-     1>d:\c++\mipsbox\os\cpu_main.cpp(81): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>d:\c++\mipsbox\os\cpu_main.cpp(85): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
-     1>d:\c++\mipsbox\os\cpu_main.cpp(101): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>d:\c++\mipsbox\os\cpu_main.cpp(105): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
          imulti.cpp
      1>d:\c++\mipsbox\os\arithmetic\imulti.cpp(116): warning C4244: 'argument' : conversion from 'LOperand_type' to 'operand_type', possible loss of data
@@ -118,4 +118,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:09.54
+Time Elapsed 00:00:26.43

@@ -76,9 +76,9 @@ I lw rt immediate rs
 35 rs rt immediate
 I sw rt immediate rs
 43 rs rt immediate
-I slti rt immediate rs
+I slti rt rs immediate
 10 rs rt immediate
-I sltiu rt immediate rs
+I sltiu rt rs immediate
 11 rs rt immediate
 J j label
 2 target

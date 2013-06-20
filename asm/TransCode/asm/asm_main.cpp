@@ -7,10 +7,11 @@ int main(){
 	getchar();//eat endl
 
 	Assemble(pc);
-	char fileName[30];
 
 	//input the whole name including .com or sth
 	PrintCommandCode();
+	
+	char fileName[30];
 	puts("Input the file name to write:");
 	gets(fileName);
 	WriteCodeToFile(fileName);

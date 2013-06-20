@@ -50,6 +50,13 @@
 	beq $k1, $zero, sys_done	#nothing match
 	jal	syscall	# $ar = sys_done		addr 80304
 sys_done:	#moved ahead for la
+	lw	$v0, 4($sp)
+	lw  $v1, 8($sp)
+	lw	$a0, 12($sp)
+	lw	$a1, 16($sp)
+	lw	$a2, 20($sp)
+	lw	$a3, 24($sp)
+syscall_ret:
 	lw	$k0, 124($sp)	#save mfhi
 	lw	$k1, 128($sp)	#save mflo
 	mthi	$k0
@@ -61,12 +68,6 @@ sys_done:	#moved ahead for la
 	lw	$k0, 140($sp)
 	mtc0	$k0, $14
 	lw	$at, 0($sp)
-	lw	$v0, 4($sp)
-	lw  $v1, 8($sp)
-	lw	$a0, 12($sp)
-	lw	$a1, 16($sp)
-	lw	$a2, 20($sp)
-	lw	$a3, 24($sp)
 	lw	$t0, 28($sp)
 	lw	$t1, 32($sp)
 	lw	$t2, 36($sp)
@@ -108,6 +109,10 @@ syscall:
 	beq 	$v0, $t0, sys_print_str # if $v0 = 4
 	li	$t0, 1
 	beq	$v0, $t0, sys_print_int #$v0 = 1
+	li	$t0, 12
+	beq $v0, $t0, sys_read_ch
+	li	$t0, 30
+	beq $v0, $t0, sys_get_time
 	j	sys_done
 
 sys_print_int:	#print $a0 addr 80320
@@ -128,7 +133,7 @@ sys_print_int:	#print $a0 addr 80320
 	push $ra
 	jal	sys_print_str
 	pop  $ra
-	add		$sp, $sp, $t4	#pop all
+	add	 $sp, $sp, $t4	#pop all
 	j	sys_done
 sys_print_str:	#print $a0
 	move $s1, $a0
@@ -136,7 +141,7 @@ sys_print_str:	#print $a0
 sys_pstr_loop:
 	lb 	$s0, 0($s1)	#$s0 char
 	beq $s0, $zero, sys_pstr_brk
-	move	$a0, $s0
+	move $a0, $s0
 	jal sys_print_ch
 	addi $s1, $s1, 1
 	j	sys_pstr_loop
@@ -144,6 +149,7 @@ sys_pstr_brk:
 	pop	$ra
 	jr	$ra
 sys_print_ch:		#a0 the char to output
+	move	$t0, $zero
 	lui		$t0, 11
 	addiu	$t0, $t0, 32764	#t0: addr for cursor
 	addi	$t1, $t0, 4		#t1: addr for disp	
@@ -165,12 +171,41 @@ sys_new_line:
 	multu	$t2, $t2, $t3	#row*80
 	sw		$t2, 0($t0)	#update cursor value
 	jr		$ra
-
-interrupt:	#do nothing right now
+sys_read_ch:
+	move	$t0, $zero
+	lui		$t0, 13	#buf addr
+	addi	$t1, $t0, -4	#buf index addr
+	lw		$t2, 0($t1)	#index
+	beq		$t2, $zero, sys_ch_zero
+	add		$t3, $t2, $t0	#ch adr
+	dec		$t3	# buf[index]: unplaced
+	lb		$v0, 0($t3)
+	j		syscall_ret
+sys_ch_zero:	#if index = zero
+	move	$v0, $zero
+	j		syscall_ret
+sys_get_time:
+	move	$t0, $zero
+	lui		$t0, 14	#buf
+	addi	$t0, $t0, 32768	#t0 = 0XD8000
+	lw		$a0, 0($t0)
+	lw		$a1, 4($t0)
+	j		syscall_ret
+interrupt:
+	move	$t0, $zero
 	lui		$t0, 15
-	ori		$t0, $t0, 65284 #receive addr FFF04
+	addiu	$t0, $t0, 65284 #receive addr FFF04
+	move 	$t1, $zero
 	lui		$t1, 13		#buf addr 0XD0000
-	addi	$t2, $t1, -4	#buf 
-#TODO
-		
-	jr		$ra
+	addi	$t2, $t1, -4	#buf index addr
+	lw		$t3, 0($t2)	#t3  index value
+	add		$t4, $t3, $t1 #the addr to put key
+	lb		$t5, 0($t0)
+	sb		$t5, 0($t4)	#store byte
+	inc		$t3	
+	sw		$t3, 0($t2)	#index++
+	addi	$t2, $t0, -4
+	lw		$t1, 0($t2)
+	andi	$t1, $t1, 65533 #clear the ready bit
+	sw		$t1, 0($t2)
+	j		sys_done

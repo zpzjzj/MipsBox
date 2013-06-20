@@ -104,6 +104,8 @@ address_type FindMemory(address_type addr){//find and change the pages
 	void ReplacePage(address_type page[], 
 				 size_t replace_index, address_type dPage);
 //--------------------declaration of functions--------------------------
+	WaitForSingleObject(PageMutex, INFINITE);
+
 	page_type dPage = addr / PAGE_SIZE;
 	address_type dOffset = addr % PAGE_SIZE;
 	for(size_t i = 0; i < MEMORY_SIZE/PAGE_SIZE; i++){
@@ -116,6 +118,7 @@ address_type FindMemory(address_type addr){//find and change the pages
 	}
 	putchar('\n');
 #endif
+			ReleaseMutex(PageMutex);
 			return PAGE_SIZE*i + dOffset;
 		}
 	}
@@ -164,6 +167,7 @@ void ReplacePage(address_type page[], size_t replace_index,
 		sprintf(fileName, "memfiles/Mem%d", page[replace_index]);
 		fp = fopen(fileName, "wb");
 		if(fp == NULL){
+			printf("pc: %X\n", gl_pc);
 			printf("For file %s:\n", fileName);
 			ERROR("Cannot open the mem file to write");
 		}
@@ -187,6 +191,7 @@ void ReplacePage(address_type page[], size_t replace_index,
 	sprintf(fileName, "memfiles/Mem%d", page[replace_index]);
 	fp = fopen(fileName, "rb");
 	if(fp == NULL){
+		printf("pc: %X\n", gl_pc);
 		printf("For file %s:\n", fileName);
 		ERROR("Cannot open the mem file to read");
 	}
@@ -195,6 +200,7 @@ void ReplacePage(address_type page[], size_t replace_index,
 #ifdef MEM_ERROR
 	printf("Page to read: %s\n", fileName);
 #endif
+	ReleaseMutex(PageMutex);
 }
 
 size_t memory_fread(address_type addr, size_t size, size_t count, FILE* fp){
@@ -204,12 +210,18 @@ size_t memory_fread(address_type addr, size_t size, size_t count, FILE* fp){
 	size_t partial_read_size = PAGE_SIZE - physical_addr % PAGE_SIZE;
 	size_t size_total = 0;
 
-	while (size_total < size){
+	//printf("count: %X size: %X \n", count, size);
+	while (size_total < (size*count)){
 		size_t tmp_size;
+		WaitForSingleObject(PageMutex, INFINITE);
 		physical_addr = FindMemory(addr);//find current page
 		tmp_size = fread(&memory[physical_addr], 1, partial_read_size, fp);
+		ReleaseMutex(PageMutex);
 		size_total += tmp_size;
-		if(tmp_size < partial_read_size)//read all
+	/*	printf("tmp_size: %X partial_read_size: %X size_total: %X addr: %X\n",
+			tmp_size, partial_read_size, size_total, addr);*/
+
+		if(tmp_size < partial_read_size)//have read all
 			break;
 		addr += partial_read_size;
 		partial_read_size = PAGE_SIZE;
@@ -302,6 +314,15 @@ address_type GetTmpAddr(address_type addr){
 	return tmp;
 #endif
 	return FindMemory(addr);
+}
+
+byte *GetPageBlock(address_type start_addr){
+	static byte block[PAGE_SIZE];
+	WaitForSingleObject(PageMutex, INFINITE);
+	address_type addr = FindMemory(start_addr);
+	memcpy(block, &memory[addr], sizeof(block));
+	ReleaseMutex(PageMutex);
+	return block;
 }
 //-------------------------------------end of memory visit interface-------------------------------
 

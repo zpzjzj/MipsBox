@@ -7,20 +7,19 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "memory.h"
-#include "TransCode/dasm/dasm.h"
+#include "dasm/TransCode/dasm/dasm_dasm.h"
 #include "arithmetic/iadder.h"
 #include "arithmetic/imulti.h"
 #include "reg.h"
-#include "reg_dasm.h"
 #include "proceed.h"
 
 #include "dasm/dasm_reg.h"
 #include "dasm/TransCode/dasm/dasm_Disassemble.h"
-//#define PROCEED_ERROR
 
+//#define PROCEED_ERROR
 void HandleException(address_type *ptr_address){
 	//set EPC , disable exception_level bit, jump to EXCEPTION_ADDR
-	cpo_reg[EPC] = *ptr_address;
+	cpo_reg[EPC] = *ptr_address;//save the pc of next instr
 	ClearBit(&cpo_reg[STATUS], EXCEPTION_LEVEL); //disable EXL bit
 	*ptr_address = EXCEPTION_ADDR;
 }

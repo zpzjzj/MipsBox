@@ -14,6 +14,7 @@ extern void DisplayReg(void);
 
 bool display_finished = 0;
 bool prog_finished = 0;
+
 //#define MAIN_RUN_ERROR
 //#define MAIN_ERROR
 //#define MAIN_DISP_ERROR
@@ -36,11 +37,14 @@ int main(void){
 	
 		display_finished = 0;
 		prog_finished = 0;//clear
-		printf("mips> ");
-		gets(command);
 		InitCPU();
 		LoadCPU();
+		printf("mips> ");
+		gets(command);
 		CreateDispThd();
+		CreateThd(IOKey);
+		CreateThd(CountTime);
+		
 		display_finished = false;
 		prog_finished = false;
 
@@ -127,7 +131,8 @@ bool AnalyzeCmd(char *cmd){//cmd end with exit
 			}while(cnt < 12+reg[29]);
 			puts("\nafter print stack");
 		}
-		if(gl_pc != EXCEPTION_ADDR){ //debug sys code
+		if(gl_pc >= EXCEPTION_ADDR)
+		{ //debug sys code
 			char ch = getchar();
 			if(ch == 'd'){
 				DisplayData(MEMORY_DISP_ADDR);
@@ -141,7 +146,6 @@ bool AnalyzeCmd(char *cmd){//cmd end with exit
 #endif
 	return false;
 }
-
 size_t LoadProgram(const size_t MAX_COM_SIZE, FILE* fp, pc_type pc){
 	size_t size = memory_fread(pc,sizeof(byte), MAX_COM_SIZE, fp);
 	fclose(fp);
