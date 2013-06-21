@@ -31,6 +31,14 @@ void CreateDispThd(void) // Dispatch threads.
 	ThreadNr++;
 }
 
+/*
+void CreateKeyboardThd(void){
+	void IOKey(void *argv);
+	void *ArgList = NULL;
+	_beginthread(IOKey, 2048, ArgList);
+	ThreadNr++;
+}*/
+
 const size_t MAX_Y = 60;
 void Display(void *argv)
 {//display memory
@@ -48,42 +56,40 @@ void Display(void *argv)
     MyAttrib = 0x0F;   // force black background 
 	size_t count = 0;
 	ClearScreen();
-	const size_t TOTAL_SIZE = csbiInfo.dwSize.X * MAX_Y / PAGE_SIZE + 1;//! floor num
-	
+	const size_t TOTAL_SIZE = csbiInfo.dwSize.X * MAX_Y;
+	csbiInfo.dwSize.Y = MAX_Y;
 	bool last_scanf_flag = 0;	//if program ends then refresh for last time
+
     do{//print every char
 		Coords.X = Coords.Y = 0;
-		for(size_t i = 0; i < TOTAL_SIZE + 1; i++){//for every part
+		for(size_t i = 0; i <= (TOTAL_SIZE+PAGE_SIZE-1)/PAGE_SIZE ; i++){//for every part
 			//get every page's first addr
+			WaitForSingleObject(hScreenMutex, INFINITE);
 			byte *mem_ptr = GetPageBlock(disp_addr+i*PAGE_SIZE);
-			for(size_t j = 0; j < PAGE_SIZE + 1; j++){//for every byte in the block
-				MyCell = mem_ptr[j];	//get every byte
-				WriteConsoleOutputCharacter(hConsoleOut, &MyCell, 1, Coords, &Dummy);
-				WriteConsoleOutputAttribute(hConsoleOut, &MyAttrib, 1, Coords, &Dummy);
-				// Increment the coordinates for next placement of the block. 
-				Coords.X += 1;
-				if(Coords.X >= csbiInfo.dwSize.X){
-					Coords.X = 0;
-					Coords.Y += 1;
+
+			size_t blockSize = PAGE_SIZE;
+			if(i == (TOTAL_SIZE+PAGE_SIZE-1)/PAGE_SIZE)
+				blockSize = (TOTAL_SIZE - i*PAGE_SIZE) % PAGE_SIZE;//remain
+
+			WriteConsoleOutputCharacter(hConsoleOut, (LPCSTR)mem_ptr, blockSize, Coords, &Dummy);
+			WriteConsoleOutputAttribute(hConsoleOut, &MyAttrib, 1, Coords, &Dummy);
+			ReleaseMutex(hScreenMutex);//unlock 
+
+			Coords.Y += blockSize / csbiInfo.dwSize.X;
+			Coords.X = (Coords.X + blockSize % csbiInfo.dwSize.X) % csbiInfo.dwSize.X;
+
+			// Increment the coordinates for next placement of the block. 
+			if(Coords.Y >= MAX_Y){
+				if(last_scanf_flag){
+					display_finished = true;
+					while(1) ;//wait
+				}	
+				if(prog_finished){//end
+					last_scanf_flag = true;
 				}
-		
-				if(Coords.Y >= MAX_Y){
-					if(last_scanf_flag){
-						display_finished = true;
-						while(1) ;//wait
-					}	
-					if(prog_finished){//end
-						last_scanf_flag = true;
-					}
-					Coords.X = 0;
-					Coords.Y = 0;//again
-					i = TOTAL_SIZE;
-					j = PAGE_SIZE;
-					//break out
-				}
-    		}//end of for every byte
-		}//end of for every block
-		ReleaseMutex(hRunMutex);//unlock 
+				break;
+			}
+		}//for every part
 	}//end of while
     while (WaitForSingleObject(hRunMutex, 75L) == WAIT_TIMEOUT);
 	// Repeat while RunMutex is still taken. 

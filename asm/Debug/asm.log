@@ -1,5 +1,98 @@
-﻿Build started 6/20/2013 4:27:13 PM.
+﻿Build started 6/20/2013 11:08:16 PM.
+     1>Project "D:\C++\MipsBox\asm\asm.vcxproj" on node 4 (Rebuild target(s)).
+     1>ClCompile:
+         D:\Software\IDE\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt assembleInit.cpp GetStr.cpp hash\GeneralHashFunctions.cpp hash\HashQuad.cpp reg.cpp TransCode\asm\asm.cpp TransCode\asm\asm_main.cpp TransCode\asm\Assemble.cpp TransCode\asm\label.cpp TransCode\asm\pseudo_instr.cpp TransCode\instruction.cpp
+         instruction.cpp
+     1>d:\c++\mipsbox\asm\transcode\instruction.cpp(30): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\c++\mipsbox\asm\transcode\instruction.cpp(80): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>d:\c++\mipsbox\asm\transcode\instruction.cpp(81): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+         pseudo_instr.cpp
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(34): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(50): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(153): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(156): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(159): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(162): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(169): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(172): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(190): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(193): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(196): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(199): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(202): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(205): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\c++\mipsbox\asm\transcode\asm\pseudo_instr.cpp(208): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+         label.cpp
+     1>d:\c++\mipsbox\asm\transcode\asm\label.cpp(57): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\asm\transcode\asm\label.cpp(65): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+         Assemble.cpp
+     1>d:\c++\mipsbox\asm\transcode\asm\assemble.cpp(33): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(261) : see declaration of 'gets'
+     1>d:\c++\mipsbox\asm\transcode\asm\assemble.cpp(78): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(261) : see declaration of 'gets'
+     1>d:\c++\mipsbox\asm\transcode\asm\assemble.cpp(96): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(261) : see declaration of 'gets'
+     1>d:\c++\mipsbox\asm\transcode\asm\assemble.cpp(288): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         asm_main.cpp
+     1>d:\c++\mipsbox\asm\transcode\asm\asm_main.cpp(6): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(290) : see declaration of 'scanf'
+     1>d:\c++\mipsbox\asm\transcode\asm\asm_main.cpp(16): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(261) : see declaration of 'gets'
+         asm.cpp
+     1>d:\c++\mipsbox\asm\transcode\asm\asm.cpp(72): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>d:\c++\mipsbox\asm\transcode\asm\asm.cpp(77): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>d:\c++\mipsbox\asm\transcode\asm\asm.cpp(83): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+         reg.cpp
+     1>d:\c++\mipsbox\asm\reg.cpp(147): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\c++\mipsbox\asm\reg.cpp(149): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+         HashQuad.cpp
+     1>d:\c++\mipsbox\asm\hash\hashquad.cpp(84): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\software\ide\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+         GeneralHashFunctions.cpp
+         GetStr.cpp
+         assembleInit.cpp
+         Generating Code...
+       Link:
+         D:\Software\IDE\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\C++\MipsBox\Debug\asm.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\C++\MipsBox\Debug\asm.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\C++\MipsBox\Debug\asm.lib" /MACHINE:X86 Debug\assembleInit.obj
+         Debug\GetStr.obj
+         Debug\GeneralHashFunctions.obj
+         Debug\HashQuad.obj
+         Debug\reg.obj
+         Debug\asm.obj
+         Debug\asm_main.obj
+         Debug\Assemble.obj
+         Debug\label.obj
+         Debug\pseudo_instr.obj
+         Debug\instruction.obj
+         asm.vcxproj -> D:\C++\MipsBox\Debug\asm.exe
+     1>Done Building Project "D:\C++\MipsBox\asm\asm.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.02
+Time Elapsed 00:00:25.58

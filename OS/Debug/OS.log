@@ -1,5 +1,5 @@
-﻿Build started 6/20/2013 5:51:28 PM.
-     1>Project "D:\C++\MipsBox\OS\OS.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 6/20/2013 11:08:16 PM.
+     1>Project "D:\C++\MipsBox\OS\OS.vcxproj" on node 3 (Rebuild target(s)).
      1>ClCompile:
          D:\Software\IDE\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt arithmetic\floatOperation.cpp arithmetic\fsTrans.cpp arithmetic\iadder.cpp arithmetic\imulti.cpp cpu_main.cpp dasm\dasm_reg.cpp dasm\TransCode\dasm\dasm_dasm.cpp dasm\TransCode\dasm\dasm_Disassemble.cpp display.cpp GetStr.cpp memory.cpp proceed.cpp reg.cpp TransCode\instruction.cpp
          instruction.cpp
@@ -29,12 +29,13 @@
                  d:\software\ide\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
          GetStr.cpp
          display.cpp
-     1>d:\c++\mipsbox\os\display.cpp(40): warning C4101: 'Delta' : unreferenced local variable
-     1>d:\c++\mipsbox\os\display.cpp(38): warning C4101: 'OldAttrib' : unreferenced local variable
-     1>d:\c++\mipsbox\os\display.cpp(37): warning C4101: 'OldCell' : unreferenced local variable
-     1>d:\c++\mipsbox\os\display.cpp(119): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
+     1>d:\c++\mipsbox\os\display.cpp(48): warning C4101: 'Delta' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(45): warning C4101: 'MyCell' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(46): warning C4101: 'OldAttrib' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(45): warning C4101: 'OldCell' : unreferenced local variable
+     1>d:\c++\mipsbox\os\display.cpp(125): warning C4996: 'kbhit': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _kbhit. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\conio.h(133) : see declaration of 'kbhit'
-     1>d:\c++\mipsbox\os\display.cpp(120): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
+     1>d:\c++\mipsbox\os\display.cpp(126): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _getch. See online help for details.
                  d:\software\ide\microsoft visual studio 11.0\vc\include\conio.h(131) : see declaration of 'getch'
          dasm_Disassemble.cpp
      1>d:\c++\mipsbox\os\dasm\transcode\dasm_instruction.h(26): warning C4091: 'extern ' : ignored on left of 'instruction_table' when no variable is declared
@@ -118,4 +119,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:26.43
+Time Elapsed 00:00:34.49

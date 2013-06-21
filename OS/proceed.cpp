@@ -103,7 +103,7 @@ void HandleIType(reg_type op, reg_type rs, reg_type rt,
 	case 9://addiu
 		reg[rt] = reg[rs] + immediate;
 		break;
-	case 12://and i
+	case 12://andi
 		reg[rt] = reg[rs] & signed_immed;
 		break;
 	case 32://lb
@@ -164,8 +164,6 @@ int Proceed(address_type *ptr_address){
 		shamt = GetShamt(instruction);
 		if(op == 0){
 			switch(func){
-			case 9://jalr
-				reg[RA] = *ptr_address + 4;
 			case 8://jr
 				*ptr_address = reg[rs];
 				return flag;
